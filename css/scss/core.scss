@@ -1,11 +1,53 @@
+@font-face {
+    font-family: main-font;
+    src: url(fonts/norwester.otf);
+}
+@font-face {
+    font-family: body-font;
+    src: url(fonts/Lato-Regular.ttf);
+}
+*{
+	box-sizing:border-box;
+}
+
 html, body{
 	margin:0;
+	background: #222222;
+	color: #FBFDFC;
+}
+.wrapper{
+	margin: 0 auto;
+	max-width:1680px;
+}
+h1,h2{
+	font-family: main-font;
+	font-weight:normal;
+}
+label{
+	font-family: main-font;
+	font-size:22px;
+	flex:1;
+}
+p, a{
+	font-family: body-font;
 }
 .product{
+	&__filter{
+		background: #363636;
+		padding:20px;
+	}
+	&__filters{
+		display:flex;
+	}
+	&__list{
+		display:flex;
+		flex-wrap:wrap;
+		margin: 30px -30px 0 -30px;
+	}
 	&__item{
 		display:inline-block;
-		margin: 0 10px;
-		width:250px;
+		width: percentage(1/5);
+		padding: 0 30px;
 		img{
 			transition: 0.2s;
 			max-height:200px;
@@ -13,8 +55,24 @@ html, body{
 		&:hover img{
 			transform: scale(1.1);
 		}
+		
+	}
+	&__inner{
+		/*border-top: 1px solid #333;
+		border-bottom: 1px solid #111;*/
 	}
 	&__reset{
+		display:inline-block;
 		cursor:pointer;
+		font-family: main-font;
+		font-size:24px;
+		background: #545454;
+		padding:12px 14px;
+		margin-top:20px;
+		min-width:150px;
+		transition: 0.2s;
+		&:hover{
+			background: lighten(#545454,5%);
+		}
 	}
 }

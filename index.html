@@ -12,22 +12,24 @@
 <body ng-app="productFilter">
 	<div class="wrapper" ng-controller="productList">
 		<div class="product__filter">
-			<form>
-			<label ng-repeat="category in categories" >
-				<input type="checkbox" ng-model="category.selected" ng-change="applyFilter()">{{ category.name }}
-			</label>
-			</form>
-			<a ng-click="resetFilters()">Reset</a>
-			<p>Filters applied: {{ categories }}</p>
+			<div class="product__filters">
+				<label ng-repeat="category in categories" >
+					<input type="checkbox" ng-model="category.selected" ng-change="applyFilter()">{{ category.name }}
+				</label>
+			</div>
+			<a class="product__reset" ng-click="resetFilters()">Reset</a>
+			
 		</div>
 		<div class="product__list">
 			<div class="product__item" ng-repeat="product in products | filter: appliedFilters">
-				<img ng-src="{{ product.image }}"/>
-				<h2>{{ product.name }}</h2>
-				<h4>{{ product.categories }}</h4>
-				<p>{{ product.description}}</p>
+				<div class="product__inner">
+					<img ng-src="{{ product.image }}"/>
+					<h2>{{ product.name }}</h2>
+					<p>{{ product.description}}</p>
+				</div>
 			</div>
 		</div>
+		<p>Filters applied: {{ categories }}</p>
 	</div>
 </body>
 </html>

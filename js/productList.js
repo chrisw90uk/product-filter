@@ -3,26 +3,46 @@ app.controller('productList',
 		$scope.categories = [
 			{name: "cinematic", selected: false},
 			{name: "atmospheric", selected: false},
-			{name: "world", selected: false}
+			{name: "world", selected: false},
+			{name: "jazz", selected: false},
+			{name: "pop", selected: false}
 		]
 		$scope.products = [
 			{
 				name: "Orchestral Essentials",
 				description: "Lorem ipsum text",
 				categories: ["cinematic"],
-				image: "img/orchestral-essentials.jpg"
+				image: "img/orchestral-essentials.png"
 			},
 			{
 				name: "Kinetic Treats",
-				image: "img/kinetic-treats.jpg",
+				image: "img/kinetic-treats.png",
 				description: "Lorem ipsum text",
-				categories: ["atmospheric","world"]
+				categories: ["atmospheric"]
 			},
 			{
 				name: "Juggernaut",
 				image: "img/juggernaut.png",
 				description: "Lorem ipsum text",
-				categories: ["world","cinematic"]
+				categories: ["electronic","atmospheric","cinematic"]
+			},
+			{
+				name: "Session Horns",
+				image: "img/session-horns.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","jazz","cinematic"]
+			},
+			{
+				name: "Session Strings",
+				image: "img/session-strings.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","cinematic"]
+			},
+			{
+				name: "Kinetic Metal",
+				image: "img/kinetic-metal.png",
+				description: "Lorem ipsum text",
+				categories: ["electronic","cinematic","atmospheric"]
 			}
 		];
 		
