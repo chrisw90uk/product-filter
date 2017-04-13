@@ -21,7 +21,7 @@
 			
 		</div>
 		<div class="product__list">
-			<div class="product__item" ng-repeat="product in products | filter: appliedFilters">
+			<div class="product__item" ng-repeat="product in products | filter: appliedFilters | orderBy:productName ">
 				<div class="product__inner">
 					<img ng-src="{{ product.image }}"/>
 					<h2>{{ product.name }}</h2>

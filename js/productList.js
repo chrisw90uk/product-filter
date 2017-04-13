@@ -43,8 +43,28 @@ app.controller('productList',
 				image: "img/kinetic-metal.png",
 				description: "Lorem ipsum text",
 				categories: ["electronic","cinematic","atmospheric"]
+			},
+			{
+				name: "India: Discovery Series",
+				image: "img/india.png",
+				description: "Lorem ipsum text",
+				categories: ["world","atmospheric"]
+			},
+			{
+				name: "West Africa: Discovery Series",
+				image: "img/west-africa.png",
+				description: "Lorem ipsum text",
+				categories: ["world","atmospheric"]
+			},
+			{
+				name: "Studio Drummer",
+				image: "img/studio-drummer.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","jazz"]
 			}
 		];
+		
+		$scope.productName = ['name'];
 		
 		$scope.showAll = true;
 		
