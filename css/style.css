@@ -15,11 +15,19 @@ html, body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1680px; }
+  max-width: 1680px;
+  padding: 0 30px; }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: main-font;
-  font-weight: normal; }
+  font-weight: normal;
+  margin-top: 0; }
+
+h2 {
+  font-size: 38px; }
+
+h3 {
+  font-size: 24px; }
 
 label {
   font-family: main-font;
@@ -29,8 +37,26 @@ label {
 p, a {
   font-family: body-font; }
 
+.category__check input[type="checkbox"] {
+  display: none; }
+
+.category__check label {
+  cursor: pointer; }
+  .category__check label:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    border: 5px solid #E5E8F1;
+    background: #E5E8F1;
+    margin-right: 10px; }
+
+.category__check input[type="checkbox"]:checked + label:before {
+  background: #80828F; }
+
 .product__filter {
-  background: #363636;
+  background: #BD1818;
   padding: 20px;
   color: #FFF; }
 
@@ -43,12 +69,15 @@ p, a {
   margin: 30px -30px 0 -30px; }
 
 .product__item {
+  vertical-align: top;
   display: inline-block;
   width: 16.66667%;
-  padding: 0 30px; }
+  padding: 0 30px;
+  margin-bottom: 20px; }
   .product__item img {
     transition: 0.2s;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20px; }
   .product__item:hover img {
     transform: scale(1.1); }
 
@@ -61,10 +90,10 @@ p, a {
   cursor: pointer;
   font-family: main-font;
   font-size: 24px;
-  background: #545454;
+  background: #FA2B2B;
   padding: 12px 14px;
   margin-top: 20px;
   min-width: 150px;
   transition: 0.2s; }
   .product__reset:hover {
-    background: #616161; }
+    background: #ec0606; }
