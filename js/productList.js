@@ -1,41 +1,72 @@
 app.controller('productList',
 	function($scope){
 		$scope.categories = [
-			{name: "Cinematic", selected: false},
-			{name: "Atmospheric", selected: false},
-			{name: "Electronic", selected: false},
-			{name: "Jazz", selected: false},
+			{name: "cinematic", selected: false},
+			{name: "atmospheric", selected: false},
+			{name: "world", selected: false},
+			{name: "jazz", selected: false},
+			{name: "pop", selected: false}
 		]
 		$scope.products = [
 			{
 				name: "Orchestral Essentials",
-				description: "A comprehensive pack of realistic orchestral instruments",
-				categories: ["Cinematic"],
-				image: "img/orchestral-essentials.jpg"
+				description: "Lorem ipsum text",
+				categories: ["cinematic"],
+				image: "img/orchestral-essentials.png"
 			},
 			{
 				name: "Kinetic Treats",
-				image: "img/kinetic-treats.jpg",
-				description: "Weird and wonderful sounds",
-				categories: ["Atmospheric"]
+				image: "img/kinetic-treats.png",
+				description: "Lorem ipsum text",
+				categories: ["atmospheric"]
 			},
 			{
 				name: "Juggernaut",
 				image: "img/juggernaut.png",
-				description: "Percussive hits and evolving pads",
-				categories: ["Electronic","Cinematic"]
+				description: "Lorem ipsum text",
+				categories: ["electronic","atmospheric","cinematic"]
 			},
 			{
 				name: "Session Horns",
-				image: "img/session-horns.jpg",
-				description: "Brass instruments for pop and jazz",
-				categories: ["Jazz","Cinematic"]
+				image: "img/session-horns.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","jazz","cinematic"]
+			},
+			{
+				name: "Session Strings",
+				image: "img/session-strings.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","cinematic"]
+			},
+			{
+				name: "Kinetic Metal",
+				image: "img/kinetic-metal.png",
+				description: "Lorem ipsum text",
+				categories: ["electronic","cinematic","atmospheric"]
+			},
+			{
+				name: "India: Discovery Series",
+				image: "img/india.png",
+				description: "Lorem ipsum text",
+				categories: ["world","atmospheric"]
+			},
+			{
+				name: "West Africa: Discovery Series",
+				image: "img/west-africa.png",
+				description: "Lorem ipsum text",
+				categories: ["world","atmospheric"]
+			},
+			{
+				name: "Studio Drummer",
+				image: "img/studio-drummer.png",
+				description: "Lorem ipsum text",
+				categories: ["pop","jazz"]
 			}
 		];
 		
-		$scope.showAll = true;
+		$scope.productName = ['name'];
 		
-		//this is mostly to estabish whether to show all or not
+		$scope.showAll = true;
 		
 		$scope.applyFilter = function() {
 			for(category in $scope.categories){
@@ -49,14 +80,14 @@ app.controller('productList',
 		
 		
 		
-		$scope.appliedFilters = function(currentProduct){
+		$scope.appliedFilters = function(product){
 			if ($scope.showAll){
 				return true;
 			}
 			for(category in $scope.categories){
 				var currentCat = $scope.categories[category];
 				if(currentCat.selected){
-					if(currentProduct.categories.indexOf(currentCat.name) != -1){
+					if(product.categories.indexOf(currentCat.name) != -1){
 						return true;
 					}
 				}

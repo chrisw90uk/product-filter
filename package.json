@@ -1,7 +1,7 @@
 {
-  "name": "Product Filter",
+  "name": "product-filter",
   "version": "1.0.0",
-  "description": "A product filter for my website, built with Angular JS.",
+  "description": "A product filter for my website, built with Angular JS",
   "main": "gulpfile.js",
   "author": "chrisw90uk",
   "dependencies": {
